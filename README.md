@@ -1,81 +1,47 @@
-## 👋 Hi there, I'm Miguel Barra
+# Hi, I'm Miguel 👋
 
-Full Stack Developer (React, Next.js, TypeScript) con más de 2 años de experiencia entregando
-software en producción para los sectores público y privado, en Santiago, Chile.
+Full stack developer from Santiago, Chile, and Computer Engineer (Universidad Andrés Bello, 2025). React, Next.js and TypeScript up front; databases, APIs, auth and cloud behind them.
 
----
+I do my best work on messy integrations: external APIs that can't be trusted, legacy systems that have to keep running, and slow requests that need a real fix.
 
-### 🚀 Perfil
+## What I'm building
 
-Construí de cero un SaaS completo para digitalizar trámites de construcción municipal,
-modernicé plataformas de salud usadas por más de 18.000 beneficiarios de Codelco y desarrollo
-herramientas propias para el mercado chileno. Manejo el stack completo: diseño de base de datos,
-APIs, autenticación e infraestructura en la nube.
+### [Pulso](https://github.com/mbarradev-debug/pulso) · [live demo](https://pulso-cyan-zeta.vercel.app)
 
----
+An API layer and dashboard over the Banco Central de Chile API. The upstream API responds in ISO-8859-1, returns `200 OK` with the error hidden in the body, and includes dates with no data that come back empty or as `0`. Pulso decodes the responses, detects errors in the body, filters out those phantom values and caches each indicator with its own fallback, so one broken series doesn't take the others down.
 
-### 💼 Experiencia
+Parallel upstream calls plus caching took responses from **~19s to ~0.23s**. Tested with Vitest and Playwright, CI on GitHub Actions.
 
-**Full Stack Developer, Forcast** · Jun 2025 - Feb 2026
-- Construí desde cero el SaaS de **ITS Solutions (DOM Digital)** para digitalizar la gestión de
-  trámites de construcción municipal, reemplazando un sistema legacy en Microsoft Project.
-  Diseño de base de datos en PostgreSQL, auth con Firebase, frontend en Next.js, backend en
-  Node.js, desplegado en Azure.
-- Desarrollé en solitario el módulo de escaneo QR de **E-Hive** en Angular, que verifica patentes
-  contra base de datos y habilita carga eléctrica a través de microservicios en Docker.
+### [Pulso for Chrome](https://chromewebstore.google.com/detail/pulso-uf-y-d%C3%B3lar/opakpmmcepebnccjjkhkgioopeadgihp?hl=es-419)
 
-**Práctica Profesional, Ewreka** · Mar 2024 - Ago 2024
-- Desarrollo de una app móvil en Flutter, implementando nuevas funcionalidades junto al equipo.
+The UF, the dollar and other Chilean indicators one click away, served by the Pulso API. Published on the Chrome Web Store. Built with WXT, React and TypeScript.
 
-**Full Stack Developer, Valuesite Ltda.** · Mar 2022 - Dic 2023
-- Modernicé la Sucursal Virtual de **iSalud** (Isapre de Codelco), usada por más de 18.000
-  afiliados, migrando funcionalidades críticas del frontend legacy.
-- Implementé nuevos endpoints en microservicios ASP.NET MVC (.NET) sobre Oracle PL/SQL para
-  flujos clínicos del frontend.
+## Things I've shipped
 
----
+- **DOM Digital** · Forcast: SaaS for municipal construction permits, built from scratch to replace a Microsoft Project workflow. I owned the architecture, database design and full backend, and coordinated an intern.
+- **E-Hive** · Forcast: scan a QR code, verify the license plate, start charging the car. Built solo in Angular on top of Dockerized microservices.
+- **iSalud** · Valuesite: modernized the virtual branch used by 18,000+ members of Codelco's Isapre, migrating critical legacy flows and adding ASP.NET MVC endpoints over Oracle PL/SQL.
+- **Ewreka** (internship): shipped features for a Flutter mobile app with the team.
 
-### 🎓 Educación
+## How I work
 
-Ingeniería en Computación e Informática, Universidad Andrés Bello · Titulado 2025
+- **A `200 OK` is not proof of success.** I validate the body and give each piece of data its own fallback.
+- **Measure before optimizing.** A speedup only counts if you timed the "before".
+- **End-to-end tests where failure is expensive.** Playwright for critical flows, fast unit tests for parsing logic that's easy to get wrong.
+- **Schema first, screens later.** The data model is the hardest thing to change afterwards.
 
----
+## Stack
 
-### 🧰 Tech Stack
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, Angular
+- **Backend:** Node.js, NestJS, ASP.NET MVC
+- **Data & auth:** PostgreSQL, Oracle PL/SQL, Supabase, Firebase Auth
+- **Cloud & tooling:** Azure, GCP, Vercel, Docker, GitHub Actions
+- **Testing:** Vitest, Playwright · **Mobile:** Flutter, Ionic
 
-**Frontend**
-![React](https://img.shields.io/badge/React-0f172a?style=for-the-badge&logo=react&logoColor=61dafb)
-![Next.js](https://img.shields.io/badge/Next.js-0f172a?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-0f172a?style=for-the-badge&logo=typescript&logoColor=3178c6)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0f172a?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8)
-![Angular](https://img.shields.io/badge/Angular-0f172a?style=for-the-badge&logo=angular&logoColor=dd0031)
+## Off the clock
 
-**Backend**
-![Node.js](https://img.shields.io/badge/Node.js-0f172a?style=for-the-badge&logo=node.js&logoColor=3c873a)
-![NestJS](https://img.shields.io/badge/NestJS-0f172a?style=for-the-badge&logo=nestjs&logoColor=e0234e)
-![.NET](https://img.shields.io/badge/ASP.NET_MVC-0f172a?style=for-the-badge&logo=dotnet&logoColor=512bd4)
+I read a bit of everything, from Agatha Christie to Japanese cozy novels. I also listen to all kinds of music; lately it's a lot of Los Tres. And I spend more time than I should tuning my setup: a [LazyVim config](https://github.com/mbarradev-debug/lazyvim-config), tmux, a [Solarized theme with the contrast fixed](https://github.com/mbarradev-debug/solarized-dark-contrast) and a [script that sets up a new Mac from zero](https://github.com/mbarradev-debug/macos-dev-setup-scripts).
 
-**Bases de datos**
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0f172a?style=for-the-badge&logo=postgresql&logoColor=336791)
-![Oracle](https://img.shields.io/badge/Oracle_PL/SQL-0f172a?style=for-the-badge&logo=oracle&logoColor=f80000)
-![Supabase](https://img.shields.io/badge/Supabase-0f172a?style=for-the-badge&logo=supabase&logoColor=3ecf8e)
+## Contact
 
-**Infraestructura**
-![Docker](https://img.shields.io/badge/Docker-0f172a?style=for-the-badge&logo=docker&logoColor=2496ed)
-![Azure](https://img.shields.io/badge/Azure-0f172a?style=for-the-badge&logo=microsoftazure&logoColor=0089d6)
-![Google Cloud](https://img.shields.io/badge/GCP-0f172a?style=for-the-badge&logo=googlecloud&logoColor=4285f4)
-![Vercel](https://img.shields.io/badge/Vercel-0f172a?style=for-the-badge&logo=vercel&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase_Auth-0f172a?style=for-the-badge&logo=firebase&logoColor=ffca28)
-
-**Mobile**
-![Flutter](https://img.shields.io/badge/Flutter-0f172a?style=for-the-badge&logo=flutter&logoColor=02569b)
-![Ionic](https://img.shields.io/badge/Ionic-0f172a?style=for-the-badge&logo=ionic&logoColor=3880ff)
-
----
-
-### 🌐 Links
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miguelbarrarios)
-[![Portfolio](https://img.shields.io/badge/Portfolio-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://miguelbarra.cl)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mbarradev-debug)
-[![Email](https://img.shields.io/badge/Email-0f172a?style=for-the-badge&logo=gmail&logoColor=ea4335)](mailto:mbarra.git@gmail.com)
+[miguelbarra.cl](https://miguelbarra.cl) · [LinkedIn](https://www.linkedin.com/in/miguelbarrarios) · [mbarra.git@gmail.com](mailto:mbarra.git@gmail.com)
